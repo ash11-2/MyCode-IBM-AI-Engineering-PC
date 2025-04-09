@@ -1,0 +1,804 @@
+Hi there. I'm Chris Norring.
+I work at Microsoft as a senior advocate.
+Today, we'll do a learn live.
+It's called the Agent Awakens,
+building applications with GitHub Copilot and the agent mode.
+So if you haven't heard about the agent mode,
+this is the learn live you want to tune into.
+My name is Chris Noring.
+If you're interested in in connecting with me,
+here's my my LinkedIn.
+You can scan the QR code if you like.
+Right.
+On today's agenda,
+there are a few things we need to go through.
+We, have roughly forty five minutes to,
+finish this learn module because that's what a learn live is.
+We go through a learn module from start to finish.
+First off, we'll talk about, the GitHub Copilot agent mode,
+what that thing is.
+Then, we'll go through the learning objectives.
+All learn modules out there have a learn objective,
+and we will talk about what we will achieve throughout this course.
+Then we'll explore the power of GitHub Copilot agent mode
+because it is really, really powerful.
+And then we'll talk about the application we're building.
+We call it the OctoFIT tracker application.
+And then we'll dive into actually building that thing,
+a front end, a back end, and a database.
+Here is our application, so you have a bit of context,
+some domain knowledge.
+We are building an application for a fictive school out there
+called Mergington High School.
+The idea is that we have a couple of characters with us.
+You might have heard of,
+if you've heard of things in GitHub,
+Paul Octo and Jessica Cat, and that forms Octo Cat.
+So the challenge here is that students rarely exercise.
+Have you heard of such a thing? Right?
+What we want to do is to make sure that they sign up to PE
+classes, become more active and more healthy, but, of course,
+all of this needs to be fun for them.
+So the solution is to build this OctoFit tracker app,
+the front end, the back end, and the database,
+and make sure also that we abide by any school,
+policies in terms of tech or otherwise.
+There's a few key features as part of this that we want to
+have as part of the application,
+namely user profiles and activity logging,
+team competitions and the leaderboard,
+and personalized workout suggestions.
+We also want to have some kind of progress tracking so we see
+how things are going.
+So your task is to follow Paul's journey using GitHub
+Codespaces and the agent mode.
+And as part of this,
+you learn how to leverage this new feature with Copilot,
+and you will then build an application to make sure that
+we fulfill all these requirements,
+all of these key features.
+Right. So here is the actual learn module.
+If you scan the QR code, you will be taken directly to it.
+Here, you can see on the,
+side here what it actually looks like.
+And without further ado, we'll jump into the browser.
+Right.
+We are now looking at the live,
+learn module called building applications with GitHub
+Copilot agent mode.
+Now one of the first things we want you to do is look through
+the learning objectives, which are stating the following,
+understand how to develop with Visual Studio Code IDE in a
+GitHub Codespace. You heard that correctly.
+We will use Codespace for those of you who don't know what it is.
+It is your super machine in the cloud powered by GitHub,
+which makes it super easy to install libraries and make sure
+that you have that machine and everything is ready to go.
+We'll also prompt.
+We will communicate with prompts,
+which means natural language text and feed that into our
+Copilot, and hopefully, it will spit out
+the code we need, but also take the actions we need because
+that's a big new novelty with,
+the agent mode is that it can actually do things for you like
+creating files, move things about, installing things, and so on.
+We'll also leverage documentation file that
+describes what this app is, what it should do, and, you know,
+any kind of information that we need to build the app fully.
+So that's that's really cool. Right?
+So that we can see documentation
+working side by side with these prompts.
+And then we you will,
+get to see how GitHub Copilot agent mode will attempt to
+fix errors if there are any, how it will refactor code,
+but also to develop new features.
+With any new module, we wanna hit start,
+so we're gonna do that.
+And, yeah, I'm not gonna spend a lot of time going through each and
+every one of these conceptual units.
+I just want you to have a good notion of what's going on here.
+So in this introduction, you see a few things.
+And here, you get to learn more about the agent mode,
+and then you get to interact with GitHub Copilot,
+and you get to learn the benefits of Copilot.
+And there's a few more conceptual units so you exactly
+understand all the different features of GitHub Copilot and how that works.
+And then we'll get to the interesting part for you
+probably as developers,
+namely the exercise where you get to build the application.
+So to get started with this,
+we need to go to GitHub and,
+actually create our own repository version from a template.
+And once we do that from that template or our own instance,
+we'll be able to kick off Codespaces,
+and we will be able to build the app from there.
+Okay.
+So imagine now that I have clicked the link in the learn
+module, this is where I end up.
+This, repository is called build applications with Copilot agent mode.
+And you can see as part of this read me that we have a few
+interesting things.
+One is a big green button who that says, copy exercise.
+This is how we start our exercise.
+And once we carried out that step,
+this gray button down here called start exercise will
+actually be enabled, and it it is currently disabled.
+So what it's asking us to do is to right click copy exercise.
+So let's do that. Let's right click it.
+Open it in a new tab,
+and what happens then is asking us to actually fork this,
+repository, and it fills out a name.
+I have done this step already,
+so we'll just gonna go to my local copy because that's how
+we're gonna continue.
+What happens once you create this is that an issue will be created.
+So let's have a look at this issue because this issue will
+say welcome, and it will tell us what to do, essentially.
+So it's telling us all about the different steps that you
+should be taking.
+But from here on out,
+we'll go into
+here.
+And what we will do,
+is to click
+to create a code space.
+We can also do so from within,
+steps here because and this is one of the things as part of this,
+exercise is that you go into the dot GitHub folder and look
+through the steps.
+And once you click through these steps,
+you'll see what we're supposed to do here.
+So at high level,
+we're talking about what is GitHub Copilot agent mode.
+So let's repeat that again.
+The agent mode is a new thing.
+You've seen Copilot, normal Copilot.
+You give it a text prompt.
+You get some kind of text back, maybe documentation,
+maybe code.
+You've seen Copilot edits, hopefully,
+where you see how we can edit multiple files at once.
+Agents is a new thing.
+The agent mode actually enables you to carry out tasks such as
+installing libraries, SDKs, run commands, move files about.
+So this is really a new thing that's really powerful.
+Now this thing here is saying to open things in Codespaces,
+and this is clickable.
+And I just wanted to mention that we have a confirm step
+down here where you we want to confirm that we are not
+operating on the original repo, but rather our copy,
+and this is important for the continuation of this task.
+So how we can create a code space then is to click the code
+here, and we can hit the plus button just like so.
+This will take a minute or two to set up our environment,
+but it's lightning fast once it gets going.
+I even think it might be faster than that.
+But yeah.
+So meanwhile, while this is setting up,
+and it almost looks like it's ready, actually,
+while it does things in the background,
+we can open up a couple of things that we wanna have open.
+One of them is the docs folder. This is for the context.
+This is descriptions of the project,
+but also describing the overall story.
+Very quick browsing at this.
+It's giving detailed instructions on project
+structure and more.
+If you're interested, you know,
+definitely look look through it so, yeah,
+you are being inspired on your own part as you plan out your
+own project, hopefully, after having seen this learn live.
+Now steps is important.
+We have five different steps to carry out today.
+What we will do for the sake of ease of reading is to open
+up in a preview.
+Wanna do this, and this is how we're gonna carry things out.
+We'll go through this read me file.
+So, first off, it's giving us various,
+information about inline suggestions.
+If you haven't heard about those, this is when you,
+type control I or command I and you see this Copilot window pop up.
+There's also the chat, which we actually could open already, like so.
+And we wanna make sure that this chat is set to agent,
+which means we are now getting ourselves ready.
+Going through the steps,
+we have already opened the code spaces.
+We're in one.
+Let's see here.
+Right.
+So the next step here is we actually gonna put ourselves
+inside of a terminal.
+And within this terminal, we hit control I,
+and we are now gonna take this command, copy that,
+paste it in, and ask Copilot for how can I be
+creating and publish a new branch?
+Might take a second or two before it powers up,
+but there it is.
+Now it's giving us a generic response,
+which is interesting, but it's not
+really what we're after.
+Instead, we want to do something like this in which we are saying,
+build OctoFit app.
+Let's give it my own name.
+And by providing this context,
+Copilot will now remember this branch name that I'm suggesting.
+So I'm gonna kick this off, and now it says, awesome. Thanks.
+At this point, we are switching from hitting the play button to hitting the
+run button because now we actually want to run the commands.
+So if you are with me here, if you look at the terminal,
+you will see how it's now the branch in red here is called
+build OctoFit app today.
+You can also type git branch if you wanna see which branch we're on.
+And we see it clearly indicates that it has created a branch,
+and it has put us in that branch,
+and it's even published a branch.
+For next steps, we're actually done with step one of this exercise,
+so we're making good progress.
+And let's put this in preview mode also,
+like so, make it easy to read,
+especially when we want to copy paste our prompts.
+So now what it's saying is
+that we will, create the application setup.
+We will run the application setup,
+so we will get directory structure,
+Python requirements, things around Django,
+things around MongoDB.
+So we'll take this first prompt
+and make sure that the agent is in agent mode.
+It is. We paste this.
+So now it's saying roughly create this initial structure,
+set up the back end virtual environment,
+environment requirements txt, and so
+on.
+And now it's figuring out what to do supported by the docs
+folder, but also supported by the prompt,
+and it will show the command it needs to do.
+So the first thing it thinks we need to do is to create a
+directory structure.
+That sounds fair enough.
+You can see here now how it's creating OctoFit tracker,
+but there's also a back end folder and a front end folder.
+And the next step is to create a virtual environment.
+Again, all we need to do is to press the green button to continue,
+and the command will be run for us.
+And now it's created the virtual environment,
+but it hasn't actually put us in the virtual environment.
+So let's see.
+It's still thinking because and you can see that at the end of
+the sentence because it says, next,
+I'll create a requirements txt file in the something something.
+So, yeah, we see that it's still progressing,
+and now it's telling us to do source,
+which means it will activate the virtual environment.
+This is important for Python app applications,
+so they are isolated, so we don't install things globally.
+And it ends up installing all the requirements by the pip install command.
+All we need to do again is to just hit the green button.
+Yes.
+We want to allow it to do things,
+And, you can see here in the terminal how things kick off,
+and it goes pretty fast.
+Compare that to a local machine,
+and I bet you any day of the week the code spaces will be
+faster, unless you got a super machine.
+So we give it a few few more seconds just to do the things.
+And if you wonder whether it's done or not,
+on the right side here at the bottom,
+you can see this progress bar spinning around.
+So while we wait for that to finish,
+now it looks like the terminal is done,
+and you can see how that communication happens back to
+Copilot.
+And it says the initial steps are now complete.
+Let me know if you'd like to proceed to do other things.
+And, yes, we wanna do that,
+but we want to take our next prompt here.
+And just shortly, what the prompt is saying is based on
+the example Mona Fit tracker app in Docs,
+So now it's referring to the fitness tracker markdown file.
+Set up the initial,
+the additional configuration for the Django app.
+Okay? Run make migrations and and so on.
+As usual, paste that in, run that,
+and wait for things to finish.
+And it already tells us that, hey. You know what, Chris?
+I'm going to run this, start project.
+And we can actually follow it a little bit to see it's
+kicking off.
+This is an interesting call out.
+You might see the green symbol that looks like a square with a
+filled circle in it.
+This is a sign that there's something here that I need to accept.
+So by pressing keep, that's exactly what's gonna happen.
+Right.
+So we've kicked off this command already,
+and now we are pressing again the green button.
+And this time around, it's running a touch command,
+which will end up creating files that we need.
+And it's quite fast as you can see,
+and there's a progress from zero to a hundred percent.
+And now it's working on the settings file.
+There's another command for us to run.
+Okay.
+So once we've run that command, the next thing,
+our next order business is to install the database.
+And luckily for this, we have another prompt.
+So now it's kicking off this command,
+and it's telling us to run these sudo commands.
+Okay. Great. Let's run these. It is quite fast.
+I just wanna point that out.
+This is way faster than my local machine,
+so I'm very happy to be inside of a code space.
+And it should finish shortly at this speed, and it has.
+Fantastic.
+It still says working on the right side here,
+so we just wanna make sure that it's all happy.
+Successfully installed. Great. Let's move on.
+Let's start the service.
+And now it's telling us to run sudo service MongoDB start.
+Okay. Fantastic.
+Starting database MongoDB.
+Fantastic.
+And there's another step here. It wants to check the status.
+And the status says, thumbs up. Okay. That's really great.
+And if you remember, there was a migration command up here.
+We just want to run this again now that we have our database up and running.
+Should paste that in the terminal, of course.
+And now, we are seeing very happy, okay looking signs,
+and that means we have finished the database setup here of step two.
+So what we've done so far is to do our initial scaffolding of the app.
+We've installed a lot of dependencies.
+We're creating our Django application.
+We have installed our database and even run our first migration.
+Now as part of step three,
+let's see what we're about to do.
+We'll we need to initialize the database.
+We need to create the actual database within MongoDB,
+and we need to update some application files.
+And lastly, we need to populate the database,
+which means that the back end layer is gonna come quite far in this step,
+but it will only come to completion by the end of step four.
+We're still on step three, so please be patient.
+Right.
+So the first step we're gonna do is to initialize and create
+the database.
+Again, we take our prompt, paste that in.
+So now we're asking for a command to create our database.
+It's thinking about it,
+and it should produce some kind of statement that we should be able to run.
+And here we have the statement,
+and all we need to do is click the green button continue,
+and that should be run.
+And it's connecting to the database. Okay. Fantastic.
+And now we are trying to run this command in the database to
+evaluate that we actually have a database.
+And now it's telling us all the different collections in the database.
+It's telling us that they are called leaderboard, teams,
+users, workouts, and activity.
+Fantastic.
+That means that we have the table structure in place.
+It also tells us that in the bottom right here in the chat
+that, Chris, these are the collections I have,
+but it's always nice to verify in more than one place.
+Now we need to update the application files for the
+Django project.
+And,
+this is just so we do the mapping between the database
+tables and, some Python classes,
+which will make retrieval or any kind of read or write,
+very simple using the Django framework.
+We give our agent a little bit of time to analyze what it has
+because it needs to do some changes in more than one file,
+I believe.
+And it's first giving us the current stage,
+which could be interesting,
+and then it should proceed to tell us what to do about it.
+And now it's telling us,
+I will actually proceed to do these changes,
+and you can see the agent working.
+You see this red button and, yeah, it's already finished,
+so I'm gonna hit keep.
+And now it's telling us to keep again. Keep.
+And there's one more file I believe that it needs to change.
+Ninety six percent. Almost there. We're excited.
+Great. Looks like all the files are updated.
+Just a mile high overview.
+Here are the views, and you can see how the views
+here, for example, on the workout view set in the bottom
+here, how it's calling workout objects all,
+which means that it's finding all the objects or all the
+entries around workout.
+And you can see the same thing for the leaderboard,
+for activity, and for teams, and so on.
+So this is really our mapping towards the database.
+We see that there was one more file that it had to do
+something with, and we can just press keep here,
+providing we are happy with the changes until everything is done.
+Let's scroll to the bottom here to say,
+let me know if you'd like to proceed.
+Yes, I would like to.
+It's opened quite a few files for us at this point.
+Let's see if we can close some down.
+Right.
+So now there's another activity,
+which is to populate the database.
+This is some seed data that we like to call it,
+some initial data to make sure that when we look at our
+application, it actually shows something around teams,
+activities, and users, and so on.
+We've come to the last step of step three,
+which is to populate the database.
+So we're gonna copy this command and
+which would then migrate data inside of our database so it
+should be populated.
+We're giving the agent a chance to think about what to do,
+which should involve creating a population database with data
+in it And also run that,
+same file with the data in it and make sure that that gets
+inserted into the database.
+So you can see here how it's reasoning on the right side to
+saying, you need to create test data.
+Okay.
+And I also need to make sure that I populate the file full with data.
+So now it's going through the populate DB files to make sure
+it's creating all the things.
+And you can also say see that because it's seed data,
+one of the first things it's doing here on line seventeen is
+to, start dropping data from various collections.
+So if the date there's data before,
+it makes sure that this is the only data that that exist.
+And it's halfway through.
+So once it's done populating the file,
+it should be creating the migration,
+and we just tell it to keep things.
+And now it's thinking a little bit again, so, hopefully,
+it will now prevent,
+show us a command to make these migrations.
+So now it's actually saying, well, Chris,
+you're doing this wrong because you're in the wrong wrong
+folder, but it has this self healing capability.
+So now it's actually telling us what to do,
+so we end up in the right folder.
+And
+now we're getting a execution error that just says no module named Django.
+And if this happens to you,
+it simply means that your virtual environment hasn't been started.
+And, again, it will self heal and say to you and say, Chris,
+you got another problem here,
+which means you don't have your virtual environment started.
+Now it's saying no such file or directory.
+Let's see where it is.
+Source OctoFIT tracker back end.
+Okay.
+OctoFIT tracker back end, VNB, OctoFIT tracker back end.
+And we can stop it if we feel like it's on the wrong path,
+and we can even do this.
+We can say,
+this command
+didn't work.
+I'm in
+the wrong directory.
+And, hopefully, it can now give me some ideas of what directory I should be in.
+And just to make sure I'm in the right root directory here,
+yes, we are in the root of the module.
+So now it's saying source act
+yeah.
+All happy days is running the migration.
+Let's see. We didn't get any issues of any sort. No.
+It's saying activity, leaderboard, and so
+on and so forth.
+Okay. So that was actually the last step three.
+As you saw, there were a few,
+issues, but no worries.
+GitHub Copilot agent mode had your back,
+and that's also really good news because as we all know
+with these demos, it always looks like they go perfect.
+So this is an excellent example to learn from.
+So, as we start, step four,
+our first activity here is to paste in this prompt where it
+essentially says, let's set up the code space for the URL,
+restart the server, and test the API.
+That's great, but I wanted to call out that there's a couple of pieces here
+that we need to replace, namely with our code spaces name.
+And we can find that at the top in the URL section that's
+called probable space computing machine.
+So all of that name needs to go there within these square brackets.
+What we can do meanwhile though is copy this
+and paste it without running it,
+but just remember that we need to replace this value,
+so we need to go to the URL here,
+Grab this
+value all the way here.
+Let's see.
+We wanna make sure there's the first one,
+and there's the second one.
+Okay. Great.
+Is that
+the yeah.
+Okay.
+We see where we need to replace because of the square brackets.
+K.
+Now we replace the first issue,
+and then we go into the next one
+Like so.
+Yeah. That should be it.
+Just make sure that you do this correctly so you don't keep a
+square bracket lying around.
+And this should think about it and go into the correct file and replace.
+And now we should just go in and edit.
+So part of this is used as the base URL, so, to set that.
+So ninety percent, ninety two, almost there.
+And now it just replaces what this base URL should be.
+This is something that's be gonna be used so it knows where to find things.
+And now it's also going through the settings file.
+We see that that one is spinning,
+and it's currently going through.
+And it's allowing a host, which means
+it will tell us what hosts are okay and not.
+And then it ends up saying you need to activate your virtual
+environment, so let's do that.
+Now it's trying to do this within the backend folder.
+Let's go in there.
+Let's try that again.
+Right, now it's happy.
+It's even giving us a command how we could do this if we had
+been in the root, so I didn't actually need to do this,
+but it's good to see that it has your back.
+If a command goes wrong, it suggests what to do instead.
+I can actually humor it just in case it has more to do.
+So let's do that from this height.
+And, yeah, it act actually said that we should be installing the, libraries again.
+It's not needed, but, you know, for the sake of humoring it,
+let's just do it in case there are more commands,
+that should result as part of this prompt.
+It doesn't say anymore,
+but let's give it a few more seconds just to make sure that
+everything has been done before proceeding.
+Yep. It looks like it was everything.
+So, the very last step in this step four before we move on to the
+React application is to launch the Django back end.
+And the way we can do that is either to
+start the server in a normal way via the terminal or we can
+click the user interface.
+Let's start by clicking the user interface,
+and I'll show you the other way of doing it too.
+So we've clicked the button,
+for starting up the Django back end, and as you can see, it works.
+We have an API route.
+And if we wanna look at a specific user, we can do so.
+We see we have a list of users, the ones we've added,
+in our previous step in step three as we populated the database.
+We can also look at see if we have any teams.
+Yeah. We have a couple of teams.
+Great.
+We feel quite confident that we have a working back end.
+We have a nice user interface that we can do with get,
+or if we also want to do some kind of post,
+we could be trying that as well.
+That takes us to the end of step four.
+Wasn't that exciting?
+Let's, just summarize all our wins so far.
+We've been able to use the agent mode to,
+create an application structure, install all
+dependencies, create our Django back end
+application, set up the rest framework,
+populated the database,
+and you could all see how that was working.
+It was loading the data from the various collections,
+and now we have one exciting step left,
+which is the React framework, the front end,
+the thing that the users will actually be interfaced with.
+And, yeah,
+there are a few steps here that we wanna run because currently
+we don't have a front end.
+It's quite empty.
+Our front end folder is very empty, but don't worry.
+After a few steps here, it will not be empty.
+Let's run that.
+And, ideally, now it should be creating the front end
+directory content, and it will also install a user
+interface or CSS library called
+Bootstrap, to make things pretty.
+And it will also import that Bootstrap into something called
+index JS, which is the entry point for our application,
+for and in this case, we're using React.
+So I will actually show you that.
+But for the time being,
+it is actually telling us to first create the directory.
+We actually have that, so that shouldn't be a big thing.
+And now it's telling us to run npx.
+And for those of you who don't know so much about front end
+applications, that is a command in Node.
+Js that enables you to, call something out there, a library,
+that will actually scaffold the front end for us using React.
+So let's do that.
+It wants us to press y for proceed. So yes.
+And now it ends up installing a bunch of packages,
+and it should also be scaffolding some files as part
+of a an initial React application.
+And it also says it's re installing React DOM,
+which we're gonna use for routing,
+and it will install React scripts.
+Those scripts will help us to run the app and and maintain
+the app and so on.
+This always take a few seconds,
+but you can already see on your left side here how the front
+end is being populated with files.
+So we just sit tight waiting for it to finish.
+It's pretty quick about it.
+It added over a thousand packages in roughly forty
+seconds, and it should just be cleaning things up.
+And happy days front end directory has been successfully
+created, and now it's asking to install
+Bootstrap, which is doing,
+and in in installing the React router dom,
+which it's also
+doing.
+And now it's generating some edits here for the sake of import
+to make sure that everything is being used.
+And I believe that was all the outcome from that first prompt,
+so it did quite a lot for us.
+And now it of course, we want to maintain this application.
+Right?
+And for that to be possible,
+it needs to create components to handle the various
+resources, activities, leaderboard, teams,
+users, and workouts.
+They all need their own component for the sake of
+maintainability, so let's do that.
+Take this prompt.
+And, it should get busy at creating a subdirectory
+called components.
+It doesn't exist yet,
+but it will soon figure out that that is the case.
+And now it's saying it's laying out the plan, for us.
+It's saying, I will be creating this. I will be creating that.
+And now we're just waiting for the agent to actually carry out
+things, and this is part of what I mentioned initially,
+part of the heavy lifting that the agent does for you.
+Of course, you can do all of these things manually,
+but having an agent that does things that you've done a
+million times for you is just good productivity.
+It's still in mid sentence.
+We're gonna wait for it to finish.
+Ah, there.
+I'll start by creating the missing components, it says.
+Alright, agent, please do your best.
+So now it's starting with the imports of these components,
+and it should sooner or later be scaffolding the components
+directory with the files in it.
+So this is nice.
+It's setting up the routing, I believe, in real time.
+And great.
+And now if you see on the left side here,
+you see that the components,
+subdirectory under source was just created,
+and it's starting to add files.
+Let's do keep to keep it
+going.
+And it ends up scaffolding all the needed files,
+so every single one of our collections now have a
+corresponding component.
+All the required updates have been made.
+Fantastic.
+And that means we are on the one of the last steps of this presentation.
+And let's start up the React applications and check the output.
+That's the name of the title for this prompt.
+Right.
+So you might actually have something similar to this user
+interface now with activities, leaderboard, teams, users, and workouts.
+So as you can see, we have a working application,
+and we could,
+add all of these instructions now for the sake of making the
+bootstrap look a little bit better.
+So we're just gonna accept our, edits here to our application.
+It's almost done.
+Right.
+So next last step of this is that we're gonna make
+everything look a bit more pretty.
+So we're asking it to use various bootstrap components
+such as forms, cards, models,
+so we get this nice looking interface.
+And it just will then go into our components and start adjusting,
+the CSS for all of these to leverage various CSS classes.
+And now it says it will,
+proceed to update App JS to use Bootstrap for navigation
+headings and other.
+So we're waiting for it to finish.
+So we're setting tight a little bit.
+And this is all giving us a nice looking navigation just like we want.
+Ninety two percent, it's almost done.
+See where the cursor is at.
+You can always track that yellow color to see where it's
+at in the code as it's adjusting.
+It's almost there. Things are getting exciting.
+And there are some edits for us to press keep,
+and there I believe there is one more step,
+in total as part of this.
+And the very last step here, just so we read it out,
+is to add some nice coloring.
+We always want some nice coloring. Right?
+Now we are waiting for the agent.
+Okay.
+We didn't let's see. There's two k pair.
+And, yeah, we are on the very last mile of this presentation today,
+and we are just so excited to see how this full stack
+application have been built,
+from database to back end to front end.
+And now the very last command of making it pretty by adding
+some nice coloring.
+And it's just working,
+and you can see that on the left side how it's doing this
+micro adjustments on the components for the sake of appearance.
+And, yeah, let's go in here and see if we can start accepting the changes.
+We can.
+Let's say keep keep keep
+keep.
+Yeah. Let me know if there's anything else.
+And by that, let's go into the application to see what it looks like.
+You saw a little bit of that before,
+but we've done some further user interface adjustments.
+And for the sake of the application,
+let's make sure that it works.
+We see our data being loaded from the database, cycling,
+CrossFit, swimming, running.
+We also see a leaderboard with various scores. Great.
+We see how we have two different teams.
+We have a set of users, metal geek, thunder god.
+I have to say I really love these names.
+And we also have workouts.
+So we can see that the application is working from
+front end to back end.
+And now let's go back and present some links because
+there's some, call to actions.
+Right, folks. You should be very proud of yourself.
+You should be patting yourselves on the shoulder.
+You have built a working application.
+It has a front end. It has a back end.
+It's even got a database with data in it.
+Isn't that fantastic?
+And all with the help of GitHub Copilot.
+You might have something that looks like what you're seeing
+on your left side or if you spend some extra cycles on the
+app because you just love this exercise,
+you might have something that looks what you're seeing on the right side.
+Right. So where can I learn more?
+We have some resources here around GitHub Copilot and agent mode.
+So please scan the QR codes to learn more because I'm
+sure you are as excited as I am about this agent mode.
+Huge congratulations to you.
+You've done something awesome and amazing.
+You have not only built an app,
+but you are part of a record attempt for a Guinness world record.
+So please confirm your participation by scanning the
+QR code that you see.
+That will let us know that you've been part of this,
+and please also share your success on social media
+using the hashtag AI skills fest.
+And thank you so much for attending.
+Please help celebrate your success with us.
+Tag us on social media with AI skills fest.
+And there is also more.
+We have the Microsoft learn platform and Microsoft
+certifications where you can, gain credentials and skills.
+And now the question is, what will you learn next?
+Well, this is part of the AI skills fest.
+We will run a myriad of activities from the time period
+of the April the eighth to May twenty eighth.
+You can find all of those experiences in the link below.
+You don't wanna miss any of that.
+And here are some next steps.
+One exciting thing I want to mention to you is the agents hack.
+If you haven't heard of agents,
+agents are the next thing after using LLMs,
+large language models.
+These are AI that does something.
+So please consider participating in the agents hack.
+Check out the link here, the AKA link,
+and also some resources, of how things work,
+how to submit solutions, and many other things.
+So what will you learn next then?
+Well, register for your next session and keep hacking.
+We wanna see things being built.
+Again, agents hack, eighth of April to the thirtieth.
+My name is Chris Noring. Thanks for watching.
